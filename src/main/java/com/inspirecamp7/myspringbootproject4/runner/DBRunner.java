@@ -22,6 +22,7 @@ public class DBRunner implements ApplicationRunner {
     //    ApplicationRunner를 override하면 꼭 사용해야하는 메서드
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        //HikariDataSource implements DataSource
         System.out.println("DataSource 구현 클래스 이름 = " + dataSource.getClass().getName());
     }
 }

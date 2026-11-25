@@ -11,8 +11,9 @@ import org.springframework.context.annotation.Bean;
 public class MySpringBootProject4Application {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(MySpringBootProject4Application.class, args);
+		//SpringApplication.run(MySpringBootProject4Application.class, args);
         SpringApplication application = new SpringApplication(MySpringBootProject4Application.class);
+        //WebApplication Type 설정하기
 //      SERVLET과 NONE의 차이점
 //      SERVLET은 웹앱이고 NONE은
         application.setWebApplicationType(WebApplicationType.SERVLET);
