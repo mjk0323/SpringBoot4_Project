@@ -1,5 +1,6 @@
 package com.inspirecamp7.myspringbootproject4.runner;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
 
 @Component
 @Order(1) // runner가 여러 개면 순서 지정 가능 1이 가장 먼저 실행됨
+@Slf4j
 public class DBRunner implements ApplicationRunner {
     @Autowired
     DataSource dataSource;
@@ -23,6 +25,6 @@ public class DBRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         //HikariDataSource implements DataSource
-        System.out.println("DataSource 구현 클래스 이름 = " + dataSource.getClass().getName());
+        log.info("DataSource 구현 클래스 이름 = {}", dataSource.getClass().getName());
     }
 }
